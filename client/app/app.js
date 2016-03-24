@@ -20,6 +20,5 @@ angular.module('kiwiSchoolApp', [
 
     $mdThemingProvider.theme('default')
       .primaryPalette('teal')
-      .accentPalette('light-green')
-      .dark();
+      .accentPalette('light-green');
   });
