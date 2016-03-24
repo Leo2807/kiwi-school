@@ -9,11 +9,17 @@ angular.module('kiwiSchoolApp', [
   'ngSanitize',
   'btford.socket-io',
   'ui.router',
-  'validation.match'
+  'validation.match',
+  'ngMaterial'
 ])
-  .config(function($urlRouterProvider, $locationProvider) {
+  .config(function($urlRouterProvider, $locationProvider, $mdThemingProvider) {
     $urlRouterProvider
       .otherwise('/');
 
     $locationProvider.html5Mode(true);
+
+    $mdThemingProvider.theme('default')
+      .primaryPalette('teal')
+      .accentPalette('light-green')
+      .dark();
   });
